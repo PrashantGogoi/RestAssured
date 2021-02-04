@@ -34,14 +34,11 @@ public class Module3_Task2
     @Test
     public void verifyUserData()
     {
-        Response response;
-        response =
-                when().
-                        get("/users").
-                then().
-                        assertThat().statusCode(200).
-                        body("id.size()", greaterThan(3)).
-                        body("name", hasItem("Ervin Howell")).
-                        extract().response();
+            when().
+                    get("/users").
+            then().
+                    assertThat().statusCode(200).
+                    body("id.size()", greaterThan(3)).
+                    body("name", hasItem("Ervin Howell"));
     }
 }
