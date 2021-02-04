@@ -28,7 +28,7 @@ public class Module3_Task2
                 build();
     }
 
-    // 1. Status Code = 200
+    // 1. Status Code is 200
     // 2. More than 3 users
     // 3. One user named "Ervin Howell"
     @Test
@@ -37,7 +37,7 @@ public class Module3_Task2
             when().
                     get("/users").
             then().
-                    assertThat().statusCode(200).
+                    statusCode(200).
                     body("id.size()", greaterThan(3)).
                     body("name", hasItem("Ervin Howell"));
     }

@@ -58,8 +58,8 @@ public class Module3_Task1
             assertThat().statusCode(200);
     }
 
-    // 1. Status Code is 200
-    // 2. Content-Type is application/json
+    // 1. Status Code is 200 - checked in Setup function
+    // 2. Content-Type is application/json - checked in Setup function
     // 3. Pet is a dog
     // 4. Name is "snoopie"
     // 5. Status is pending
@@ -70,7 +70,6 @@ public class Module3_Task1
             get("/pet/12345").
         then().
             assertThat().
-            header("content-type", equalTo("application/json")).
             body("category.name", equalTo("dog")).
             body("name", equalTo("snoopie")).
             body("status", equalTo("pending"));
