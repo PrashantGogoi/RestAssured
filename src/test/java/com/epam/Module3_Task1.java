@@ -3,7 +3,6 @@ package com.epam;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
-import org.json.simple.JSONObject;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -56,6 +55,8 @@ public class Module3_Task1
             post("/pet").
         then().
             assertThat().statusCode(200);
+
+        System.out.println(inputJSON);
     }
 
     // 1. Status Code is 200 - checked in Setup function
