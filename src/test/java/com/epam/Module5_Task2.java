@@ -19,7 +19,7 @@ public class Module5_Task2
         RestAssured.basePath = "/data/2.5";
         RestAssured.requestSpecification = new RequestSpecBuilder().
                 setContentType("application/json").
-                addParam("appid", "ae7701f4205b7deea3c4b28442009672").
+                addParam("appid", "").
                 build();
     }
 
